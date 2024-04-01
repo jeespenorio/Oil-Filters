@@ -1,0 +1,254 @@
+import pandas as pd
+
+# Initial data
+data1 = {'Make': ['ARCTIC CAT'], 'Model': ['all models'], 'Vendor': ['NACH'], 
+         'MPN': ['SM-07068'], 'AD Item Number': ['KX09400'], 
+         'Vendor Notes': ['WITH O-RING'], 
+         'NI#': ['SM-07068'], 'REF#': ['09-4 00'], 'OEM#': ['3005-948']}
+
+# List of models
+new_list_models = [
+'Bearcat Widetrack',
+'Bearcat 570 Long Track',
+'Bearcat Widetrack Turbo',
+'Bearcat Widetrack Turbo Articulating',
+'4-Stroke Touring',
+'4-Stroke Trail',
+'90 2x4 4-Stroke',
+'T660 Touring',
+'T660 Turbo Touring',
+'T660 Turbo Trail',
+'T660 Turbo',
+'T660 Turbo ST',
+'T660 Turbo ST EFI Early Build',
+'T660 Turbo Touring LE',
+'T660 Turbo Trail LE'
+]
+
+oem_numbers = ['2540006', '2540086']
+
+# Range of years
+years = list(range(2003, 2009))
+
+# Function to generate DataFrame for each model
+def generate_df(model, data, year):
+    data_copy = data.copy()  # Create a copy of data1 to avoid modifying the original dictionary
+    data_copy['Model'] = model
+    data_copy['Year'] = year
+    return pd.DataFrame(data_copy)
+
+# Generate DataFrames for all sets of data
+dfs = []
+for year in years:
+    for oem in oem_numbers:
+        data1['OEM#'] = oem
+        df1 = pd.concat([generate_df(model, data1, year) for model in new_list_models], ignore_index=True)
+        dfs.append(df1)
+
+# Concatenate all DataFrames
+final_df = pd.concat(dfs, ignore_index=True)
+
+# Print the final DataFrame
+print(final_df)
+
+file_path = r"C:\Users\User\Desktop\nachmann\Oil Filters\MERGE\Oilfilters_bear4strket6603~09.csv"
+final_df.to_csv(file_path, index=False)
+
+import pandas as pd
+
+# Initial data
+data1 = {'Make': ['SKI-DOO'], 'Model': ['all models'], 'Vendor': ['NACH'], 
+         'MPN': ['SM-07163'], 'AD Item Number': ['KX09400'], 
+         'Vendor Notes': ['PAPER ELEMENT TYPE WITH O-RING'], 
+         'NI#': ['SM-07163'], 'REF#': [pd.NA], 'OEM#': ['420956120','420956123','420956124']}
+
+# List of models
+new_list_models = [
+'Expedition LE E-TEC 600R',
+'Expedition SE ACE 900',
+'Expedition SE ACE 900 Turbo R',
+'Expedition Sport ACE 900',
+'Grand Touring Limited ACE 900',
+'Grand Touring Limited ACE 900 Turbo',
+'Grand Touring Limited ACE 900 Turbo R',
+'Grand Touring Sport 600 ACE',
+'Grand Touring Sport ACE 900',
+
+
+]
+
+oem_numbers = ['420956120','420956123','420956124']
+
+# Range of years
+years = list(range(2023, 2024))
+
+# Function to generate DataFrame for each model
+def generate_df(model, data, year):
+    data_copy = data.copy()  # Create a copy of data1 to avoid modifying the original dictionary
+    data_copy['Model'] = model
+    data_copy['Year'] = year
+    return pd.DataFrame(data_copy)
+
+# Generate DataFrames for all sets of data
+dfs = []
+for year in years:
+    for oem in oem_numbers:
+        data1['OEM#'] = oem
+        df1 = pd.concat([generate_df(model, data1, year) for model in new_list_models], ignore_index=True)
+        dfs.append(df1)
+
+# Concatenate all DataFrames
+final_df = pd.concat(dfs, ignore_index=True)
+
+# Print the final DataFrame
+print(final_df)
+
+file_path = r"C:\Users\User\Desktop\nachmann\Oil Filters\MERGE\Oilfilters_23ExpGrandTour.csv"
+final_df.to_csv(file_path, index=False)
+
+import pandas as pd
+
+# Initial data
+data1 = {'Make': ['SKI-DOO'], 'Model': ['all models'], 'Vendor': ['NACH'], 
+         'MPN': ['SM-07163'], 'AD Item Number': ['KX09400'], 
+         'Vendor Notes': ['PAPER ELEMENT TYPE WITH O-RING'], 
+         'NI#': ['SM-07163'], 'REF#': [pd.NA], 'OEM#': ['420956120','420956123','420956124']}
+
+# List of models
+new_list_models = [
+'GSX LE ACE 900',
+'GSX LE 4-TEC 1200',
+'GSX LE E-TEC 600 HO',
+'GSX SE E-TEC 800R',
+'GSX SE 4-TEC 1200',
+'GSX SE E-TEC 600 HO'
+
+
+]
+
+oem_numbers = ['420956120','420956123','420956124']
+
+# Range of years
+years = list(range(2014, 2015))
+
+# Function to generate DataFrame for each model
+def generate_df(model, data, year):
+    data_copy = data.copy()  # Create a copy of data1 to avoid modifying the original dictionary
+    data_copy['Model'] = model
+    data_copy['Year'] = year
+    return pd.DataFrame(data_copy)
+
+# Generate DataFrames for all sets of data
+dfs = []
+for year in years:
+    for oem in oem_numbers:
+        data1['OEM#'] = oem
+        df1 = pd.concat([generate_df(model, data1, year) for model in new_list_models], ignore_index=True)
+        dfs.append(df1)
+
+# Concatenate all DataFrames
+final_df = pd.concat(dfs, ignore_index=True)
+
+# Print the final DataFrame
+print(final_df)
+
+file_path = r"C:\Users\User\Desktop\nachmann\Oil Filters\MERGE\Oilfilters_14gsx.csv"
+final_df.to_csv(file_path, index=False)
+
+
+import pandas as pd
+
+# Initial data
+data1 = {'Make': ['SKI-DOO'], 'Model': ['all models'], 'Vendor': ['NACH'], 
+         'MPN': ['SM-07163'], 'AD Item Number': ['KX09400'], 
+         'Vendor Notes': ['PAPER ELEMENT TYPE WITH O-RING'], 
+         'NI#': ['SM-07163'], 'REF#': [pd.NA], 'OEM#': ['420956120','420956123','420956124']}
+
+# List of models
+new_list_models = [
+'Skandic LE 600 ACE',
+'Skandic LE E-TEC 600R',
+'Skandic SE ACE 900'
+
+]
+
+oem_numbers = ['420956120','420956123','420956124']
+
+# Range of years
+years = list(range(2023, 2024))
+
+# Function to generate DataFrame for each model
+def generate_df(model, data, year):
+    data_copy = data.copy()  # Create a copy of data1 to avoid modifying the original dictionary
+    data_copy['Model'] = model
+    data_copy['Year'] = year
+    return pd.DataFrame(data_copy)
+
+# Generate DataFrames for all sets of data
+dfs = []
+for year in years:
+    for oem in oem_numbers:
+        data1['OEM#'] = oem
+        df1 = pd.concat([generate_df(model, data1, year) for model in new_list_models], ignore_index=True)
+        dfs.append(df1)
+
+# Concatenate all DataFrames
+final_df = pd.concat(dfs, ignore_index=True)
+
+# Print the final DataFrame
+print(final_df)
+
+file_path = r"C:\Users\User\Desktop\nachmann\Oil Filters\MERGE\Oilfilters_23skandic.csv"
+final_df.to_csv(file_path, index=False)
+
+import pandas as pd
+
+# Initial data
+data1 = {'Make': ['SKI-DOO'], 'Model': ['all models'], 'Vendor': ['NACH'], 
+         'MPN': ['SM-07163'], 'AD Item Number': ['KX09400'], 
+         'Vendor Notes': ['PAPER ELEMENT TYPE WITH O-RING'], 
+         'NI#': ['SM-07163'], 'REF#': [pd.NA], 'OEM#': ['420956120','420956123','420956124']}
+
+# List of models
+new_list_models = [
+'Grand Touring LE 4-TEC 1200',
+'Grand Touring SE 4-TEC 1200',
+'MX Z Sport 600 ACE',
+'MX Z TNT 600 ACE',
+'Skandic WT 600 ACE',
+'Skandic SWT ACE 600',
+'Expedition 1200 SE',
+'Expedition LE 4-TEC 1200',
+'Expedition Sport 600 ACE',
+'Formula MX ZX',
+'MX Z 1200 TNT'
+]
+
+oem_numbers = ['420956120','420956123','420956124']
+
+# Range of years
+years = list(range(2011, 2024))
+
+# Function to generate DataFrame for each model
+def generate_df(model, data, year):
+    data_copy = data.copy()  # Create a copy of data1 to avoid modifying the original dictionary
+    data_copy['Model'] = model
+    data_copy['Year'] = year
+    return pd.DataFrame(data_copy)
+
+# Generate DataFrames for all sets of data
+dfs = []
+for year in years:
+    for oem in oem_numbers:
+        data1['OEM#'] = oem
+        df1 = pd.concat([generate_df(model, data1, year) for model in new_list_models], ignore_index=True)
+        dfs.append(df1)
+
+# Concatenate all DataFrames
+final_df = pd.concat(dfs, ignore_index=True)
+
+# Print the final DataFrame
+print(final_df)
+
+file_path = r"C:\Users\User\Desktop\nachmann\Oil Filters\MERGE\Oilfilters_1123tnt1200.csv"
+final_df.to_csv(file_path, index=False)
